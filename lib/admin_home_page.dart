@@ -13,32 +13,38 @@ class AdminHomePage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          ListTile(
-            title: Text('Schedule an Exam'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AdminScheduleExamPage()),
-              );
-            },
+          Card(
+            child: ListTile(
+              title: Text('Schedule an Exam'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AdminScheduleExamPage()),
+                );
+              },
+            ),
           ),
-          ListTile(
-            title: Text('Schedule Form Fill-up Date'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AdminScheduleFormPage()),
-              );
-            },
+          Card(
+            child: ListTile(
+              title: Text('Schedule Form Fill-up Date'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AdminScheduleFormPage()),
+                );
+              },
+            ),
           ),
-          ListTile(
-            title: Text('Requests for Certificates'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AdminRequestsPage()),
-              );
-            },
+          Card(
+            child: ListTile(
+              title: Text('Requests for Certificates'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AdminRequestsPage()),
+                );
+              },
+            ),
           ),
         ],
       ),

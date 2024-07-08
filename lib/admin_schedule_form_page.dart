@@ -12,10 +12,25 @@ class AdminScheduleFormPage extends StatelessWidget {
         child: Column(
           children: [
             TextField(
-              decoration: InputDecoration(labelText: 'Form Name'),
+              decoration: InputDecoration(
+                labelText: 'Form Name',
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
             ),
+            SizedBox(height: 10),
             TextField(
-              decoration: InputDecoration(labelText: 'Last Date'),
+              decoration: InputDecoration(
+                labelText: 'Last Date',
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
             ),
             SizedBox(height: 20),
             ElevatedButton(
@@ -23,6 +38,12 @@ class AdminScheduleFormPage extends StatelessWidget {
                 // Handle scheduling
               },
               child: Text('Schedule'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
             ),
           ],
         ),
