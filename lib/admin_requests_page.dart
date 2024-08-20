@@ -3,7 +3,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
 class AdminRequestsPage extends StatefulWidget {
+  const AdminRequestsPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _AdminRequestsPageState createState() => _AdminRequestsPageState();
 }
 
@@ -30,8 +33,9 @@ class _AdminRequestsPageState extends State<AdminRequestsPage> {
     requestList.removeAt(index);
     await prefs.setStringList('requests', requestList);
     _loadRequests();
+    // ignore: use_build_context_synchronously
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Request completed successfully!')),
+      const SnackBar(content: Text('Request completed successfully!')),
     );
   }
 
@@ -39,7 +43,7 @@ class _AdminRequestsPageState extends State<AdminRequestsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Certificate Requests'),
+        title: const Text('Certificate Requests'),
       ),
       body: ListView.builder(
         itemCount: requests.length,
@@ -50,7 +54,7 @@ class _AdminRequestsPageState extends State<AdminRequestsPage> {
               title: Text('${request['name']} - ${request['examRoll']}'),
               subtitle: Text('Semester: ${request['semester']}, Session: ${request['session']}'),
               trailing: IconButton(
-                icon: Icon(Icons.check),
+                icon: const Icon(Icons.check),
                 onPressed: () => _completeRequest(index),
               ),
             ),

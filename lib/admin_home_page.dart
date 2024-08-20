@@ -4,18 +4,20 @@ import 'admin_schedule_form_page.dart';
 import 'admin_requests_page.dart';
 
 class AdminHomePage extends StatelessWidget {
+  const AdminHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Home'),
+        title: const Text('Admin Home'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         children: [
           Card(
             child: ListTile(
-              title: Text('Schedule an Exam'),
+              title: const Text('Schedule an Exam'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -26,7 +28,7 @@ class AdminHomePage extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Schedule Form Fill-up Date'),
+              title: const Text('Schedule Form Fill-up Date'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -37,7 +39,7 @@ class AdminHomePage extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Requests for Certificates'),
+              title: const Text('Requests for Certificates'),
               onTap: () {
                 Navigator.push(
                   context,
